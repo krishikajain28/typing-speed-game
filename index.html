@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Speed Test</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/684b371bab.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1 class="heading">Welcome to the Typing Speed Test Game!</h1>
+    <p class="sub-heading">Let's check your typing speed, shall we?</p>
+    <p class="sub-heading">(take care of punctuations)</p>
+    <div class="input-box">
+      <button class="stop" type="submit">Stop</button>
+      <input type="text" placeholder="Start typing here..." class="text-box" />
+      <i
+        class="fa-solid fa-rotate-right"
+        id="icon"
+        aria-label="Restart test"
+        role="button"
+        tabindex="0"
+      ></i>
+    </div>
+    <div class="down-area">
+      <div class="stats">
+        <h3 class="stats-heading">Statistics</h3>
+        <span><strong>Time:</strong> <span id="timer">0</span> sec</span>
+        <span><strong>WPM:</strong> <span id="wpm">0</span></span>
+        <span><strong>Accuracy:</strong> <span id="accuracy">0%</span></span>
+      </div>
+
+      <div class="random-text">
+        Welcome to the only place where it's just you the keyboard and a bunch
+        of sentences more stable than your last situationship
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

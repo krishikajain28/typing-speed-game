@@ -1,0 +1,162 @@
+@font-face {
+  font-family: "Absender";
+  src: url("../Typing Speed Test/fonts/absender1.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #10002b, #1a0144, #010314);
+  color: #d96bff;
+}
+
+.heading {
+  font-family: "Absender", sans-serif;
+  font-size: 3rem;
+  padding: 4rem;
+  text-align: center;
+}
+
+.sub-heading {
+  font-family: "Absender", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.input-box {
+  width: 90%;
+  max-width: 700px;
+  height: 50px;
+  margin: 70px auto;
+  border: 2px solid #d96bff;
+  border-radius: 10px;
+  background-color: #10002b;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  padding-top: 0rem;
+}
+
+.text-box {
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+  color: #d96bff;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  font-family: "Absender", sans-serif;
+}
+
+.text-box::placeholder {
+  color: #d96bff77;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.random-text {
+  font-family: "Absender", sans-serif;
+  height: auto;
+  padding: 50px;
+  border: 2px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: #10002b;
+  word-spacing: 4px;
+  line-height: 50px;
+  color: #d96bff;
+  width: 90%;
+  max-width: 1110px;
+  margin: 0;
+}
+
+.restart-btn {
+  font-family: "Absender", sans-serif;
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: #d96bff;
+  color: #10002b;
+  border: none;
+  cursor: pointer;
+  height: auto;
+  width: auto;
+}
+
+.stats {
+  font-family: "Absender", sans-serif;
+  font-size: 1.2rem;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #10002b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* spacing between stats */
+  color: #d96bff;
+  min-width: 250px;
+  max-width: 400px;
+  margin-top: auto;
+  margin-left: 50px;
+  margin-right: 0px;
+  height: 200px;
+}
+
+span {
+  margin-top: 10px;
+}
+
+.down-area {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.stats-heading {
+  font-family: "Absender", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 17px;
+}
+
+.stop {
+  font-family: "Absender", sans-serif;
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: #d96bff;
+  color: #10002b;
+  border: none;
+  cursor: pointer;
+  height: auto;
+  width: auto;
+}
+
+#icon {
+  padding-top: 15px;
+  padding-right: 30px;
+  cursor: pointer;
+}
