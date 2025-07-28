@@ -10,6 +10,7 @@
 }
 
 body {
+  font-family: 'Absender', sans-serif;
   min-height: 100vh;
   background: linear-gradient(135deg, #10002b, #1a0144, #010314);
   color: #d96bff;
@@ -23,7 +24,7 @@ body {
 }
 
 .sub-heading {
-  font-family: "Absender", sans-serif;
+  font-family: 'Absender', sans-serif;
   font-size: 2rem;
   text-align: center;
   margin-bottom: 2rem;
@@ -52,7 +53,7 @@ body {
   border: none;
   outline: none;
   padding-left: 10px;
-  font-family: "Absender", sans-serif;
+  font-family: 'Absender', sans-serif;
 }
 
 .text-box::placeholder {
@@ -71,7 +72,7 @@ body {
 }
 
 .random-text {
-  font-family: "Absender", sans-serif;
+  font-family: 'Absender', sans-serif;
   height: auto;
   padding: 50px;
   border: 2px;
@@ -89,7 +90,7 @@ body {
 }
 
 .restart-btn {
-  font-family: "Absender", sans-serif;
+  font-family: 'Absender', sans-serif;
   font-size: 1.5rem;
   padding: 10px 20px;
   border-radius: 8px;
@@ -102,7 +103,7 @@ body {
 }
 
 .stats {
-  font-family: "Absender", sans-serif;
+  font-family: 'Absender', sans-serif;
   font-size: 1.2rem;
   padding: 20px;
   border-radius: 10px;
@@ -134,14 +135,14 @@ span {
 }
 
 .stats-heading {
-  font-family: "Absender", sans-serif;
+  font-family: 'Absender', sans-serif;
   font-size: 2rem;
   text-align: center;
   padding-top: 17px;
 }
 
 .stop {
-  font-family: "Absender", sans-serif;
+  font-family: 'Absender', sans-serif;
   font-size: 1.5rem;
   padding: 10px 20px;
   border-radius: 8px;
