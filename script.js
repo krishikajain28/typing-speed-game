@@ -27,6 +27,10 @@ const sentences = [
   "You're not hard to love. You're just not console.logging your energy on unresponsive functions anymore.",
 ];
 
+// function normalizeText(text){
+// will do when bored
+// }
+
 function loadNewSentence() {
   const randomIndex = Math.floor(Math.random() * sentences.length); //math.floor is for rounding the number and math.random picks up any randome numbe from 0 to 1 eg 0.7655
   randomText.innerText = sentences[randomIndex];
@@ -140,10 +144,17 @@ function checkTypingProgress() {
   accuracy.innerText = accuracyValue + "%";
 
   //if the typing is just as same as the given text
-  if (typedText === targetText) {
+  if (typedText.length >= targetText.length) {
     clearInterval(intervalId);
     isTyping = false;
-    alert("Well done! ✅ You typed it correctly.");
+    updateStats();
+
+    const isPerfect = typedText === targetText;
+    if (isPerfect) {
+      alert("Well done! ✅ You typed it correctly.");
+    } else {
+      alert("Finished! But with some mistakes. Check your accuracy.");
+    }
   }
 }
 
@@ -163,3 +174,21 @@ stopBtn.addEventListener("click", () => {
 textBox.addEventListener("paste", (e) => {
   e.preventDefault();
 });
+
+const strictMode = true; // you can tie this to checkbox later
+
+const isCorrect = strictMode
+  ? typedText === targetText
+  : typedText.toLowerCase() === targetText.toLowerCase();
+
+function startCountdown(seconds = 3) {
+  let count = seconds;
+  const countdown = setInterval(() => {
+    randomText.innerText = `Starting in ${count}...`;
+    count--;
+    if (count < 0) {
+      clearInterval(countdown);
+      loadNewSentence();
+    }
+  }, 1000);
+}
