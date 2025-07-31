@@ -17,8 +17,8 @@ Track your **Words Per Minute (WPM)** and **Accuracy** while racing against a **
 
 ## 🧠 How It Works
 
-1. The timer starts when you begin typing.
-2. Each character/word is validated in real time.
+1. The timer starts when you begin typing. 
+2. Each character/word is validated in real time. (in every 1 second)
 3. When time’s up or the sentence ends, WPM and accuracy are calculated.
    > ⏱️ The timer is set for **30 seconds**, and sentences are curated accordingly.
 
