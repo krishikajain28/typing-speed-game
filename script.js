@@ -10,21 +10,16 @@ let isTyping = false;
 let startTime, intervalId;
 
 const sentences = [
-  "Practice makes a woman perfect, keep practising dumping until you find the one who does not need fixing, editing, or updating",
-  "Typing is a useful skill, sspecially when you need to type 'I'm dumping you' faster than he types 'wyd?'.",
-  "Stay hungry, stay foolish & Also stay away from him",
+  "Practice makes a woman perfect, keep practising dumping until you find the one who does not need fixing, editing or updating",
+  "Typing is a useful skill, especially when you need to type Im dumping you faster than he types wyd?",
+  "Stay hungry, stay foolish and also stay away from him",
   "Consistency is the key, but him being consistently toxic is not",
-  "Success comes with time. But not your ex. He comes with excuses, lies, and lag. Upgrade already.",
-  "Multitasking? She blocks, types 90 WPM, aces finals, and still remembers her worth. Talent unmatched.",
-  "Not every bug is in your code. Some walk, talk, and text 'u up?' at 2 AM.",
-  "You're not 'too much' — he's just running an outdated emotional processor. Let him buffer in someone else's life.",
-  "She dumped him in Times New Roman. Bold, 16pt. No italics, no confusion, just clarity.",
-  "Your red flags radar got upgraded. Now you debug relationships before they crash your peace.",
-  "You don't double text. You double major, double hustle, and double-check your self-respect.",
-  "He said he needed space. So you gave him the entire cloud — and never looked back.",
-  "She's not ignoring you. She’s just busy coding her future — and you’re not in the import list.",
-  "Romanticize your growth. Not a situationship with poor syntax and even poorer effort.",
-  "You're not hard to love. You're just not console.logging your energy on unresponsive functions anymore.",
+  "Success comes with time but not your ex. He comes with excuses, toxicity, and deception",
+  "Not every bug is in your code, some are promising you false love and affection",
+  "He said he needed space, so you gave him the entire cloud and never looked back.",
+  "Shes not ignoring you, Shes just busy coding her future and youre not in the import list.",
+  "Romanticize your growth, Not a situationship with poor syntax and even poorer effort.",
+  "You are not a backup plan or a placeholder, you are the main function in the code of life.",
 ];
 
 // function normalizeText(text){
@@ -129,8 +124,8 @@ function updateStats() {
 }
 
 function checkTypingProgress() {
-  const targetText = randomText.innerText;
-  const typedText = textBox.value;
+  const targetText = randomText.innerText.toLowerCase();
+  const typedText = textBox.value.toLowerCase();
 
   let correctChars = 0;
   for (let i = 0; i < typedText.length; i++) {
