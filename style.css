@@ -14,38 +14,39 @@ body {
   min-height: 100vh;
   background: linear-gradient(135deg, #10002b, #1a0144, #010314);
   color: #d96bff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .heading {
-  font-family: 'Absender', sans-serif;
   font-size: 3rem;
-  padding: 4rem;
+  padding: 4rem 2rem 1rem;
   text-align: center;
 }
 
 .sub-heading {
-  font-family: 'Absender', sans-serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .input-box {
   width: 90%;
   max-width: 700px;
   height: 50px;
-  margin: 70px auto;
+  margin: 50px auto;
   border: 2px solid #d96bff;
   border-radius: 10px;
   background-color: #10002b;
   display: flex;
-  justify-self: center;
-  align-self: center;
-  padding-top: 0rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
 }
 
 .text-box {
-  width: 100%;
+  flex: 1;
   height: 100%;
   font-size: 1rem;
   color: #d96bff;
@@ -53,7 +54,6 @@ body {
   border: none;
   outline: none;
   padding-left: 10px;
-  font-family: 'Absender', sans-serif;
 }
 
 .text-box::placeholder {
@@ -62,48 +62,26 @@ body {
 }
 
 @keyframes blink {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 .random-text {
-  font-family: 'Absender', sans-serif;
-  height: auto;
-  padding: 50px;
-  border: 2px;
+  padding: 40px;
   border-radius: 10px;
   font-weight: bold;
   font-size: 1.5rem;
   text-align: center;
   background-color: #10002b;
   word-spacing: 4px;
-  line-height: 50px;
+  line-height: 40px;
   color: #d96bff;
   width: 90%;
-  max-width: 1110px;
-  margin: 0;
-}
-
-.restart-btn {
-  font-family: 'Absender', sans-serif;
-  font-size: 1.5rem;
-  padding: 10px 20px;
-  border-radius: 8px;
-  background-color: #d96bff;
-  color: #10002b;
-  border: none;
-  cursor: pointer;
-  height: auto;
-  width: auto;
+  max-width: 1000px;
+  margin: 20px auto;
 }
 
 .stats {
-  font-family: 'Absender', sans-serif;
   font-size: 1.2rem;
   padding: 20px;
   border-radius: 10px;
@@ -111,51 +89,136 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px; /* spacing between stats */
+  gap: 10px;
   color: #d96bff;
   min-width: 250px;
-  max-width: 400px;
-  margin-top: auto;
-  margin-left: 50px;
-  margin-right: 0px;
-  height: 200px;
-}
-
-span {
-  margin-top: 10px;
-}
-
-.down-area {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 40px;
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
 }
 
 .stats-heading {
-  font-family: 'Absender', sans-serif;
   font-size: 2rem;
   text-align: center;
-  padding-top: 17px;
 }
 
-.stop {
+.stop, .restart-btn {
   font-family: 'Absender', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding: 10px 20px;
   border-radius: 8px;
   background-color: #d96bff;
   color: #10002b;
   border: none;
   cursor: pointer;
-  height: auto;
-  width: auto;
+}
+
+.down-area {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 #icon {
-  padding-top: 15px;
-  padding-right: 30px;
+  padding: 10px;
   cursor: pointer;
+  font-size: 1.5rem;
+}
+
+/* -------------------
+   RESPONSIVE SECTION
+------------------- */
+
+@media (max-width: 1024px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  .sub-heading {
+    font-size: 1.4rem;
+  }
+
+  .random-text {
+    font-size: 1.3rem;
+    padding: 30px;
+    line-height: 35px;
+  }
+
+  .stats {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2rem;
+    padding: 2rem 1rem 0.5rem;
+  }
+
+  .sub-heading {
+    font-size: 1.2rem;
+  }
+
+  .down-area {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .input-box {
+    height: 45px;
+    margin: 30px auto;
+  }
+
+  .random-text {
+    width: 95%;
+    font-size: 1.2rem;
+    padding: 25px;
+  }
+
+  .stop, .restart-btn {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.6rem;
+  }
+
+  .sub-heading {
+    font-size: 1rem;
+  }
+
+  .random-text {
+    font-size: 1rem;
+    line-height: 28px;
+    padding: 20px;
+  }
+
+  .stats {
+    font-size: 0.9rem;
+    padding: 15px;
+    min-width: auto;
+  }
+
+  .input-box {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .text-box {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  #icon {
+    padding: 5px;
+    font-size: 1.2rem;
+  }
 }
